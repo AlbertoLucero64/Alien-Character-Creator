@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">FaceMaker</string>
+
+    <string-array name = "hair_style">
+        <item> Choice 1</item>
+        <item>Choice 2</item>
+        <item>Choice 3 </item>
+    </string-array>
+</resources>
