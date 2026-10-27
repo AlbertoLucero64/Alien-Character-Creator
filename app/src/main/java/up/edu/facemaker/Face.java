@@ -11,10 +11,7 @@ import android.util.AttributeSet;
 import android.view.SurfaceView;
 
 import java.util.Random;
-/*
- *
- * @author Alberto Lucero
- */
+
 
 public class Face extends SurfaceView {
     private FaceModel faceModelReference;
@@ -23,15 +20,14 @@ public class Face extends SurfaceView {
     public int hairColor;
     public int hairStyle;
     private Random random = new Random();
-
     //Variable that will be used to randomly select a number from 0 to 255 for RGB values
     //public int random = (int)(Math.random()*256);
 
 
 
-    //Getter method
+    //Getter method for FaceModel
     public FaceModel getFaceModelReference() {
-        return this.faceModelReference;
+        return faceModelReference;
     }
 
     public Face(Context context, AttributeSet attrs) {
@@ -41,12 +37,7 @@ public class Face extends SurfaceView {
 
         setWillNotDraw(false);
         setBackgroundColor(Color.WHITE);
-
-        //Color Palette
-        //hairPaint.setStyle(Paint.Style.FILL);
-        //eyePaint.setStyle(Paint.Style.FILL);
-        //skinPaint.setStyle(Paint.Style.FILL);
-
+        //Randomize default face
         randomize();
         }
 
@@ -67,7 +58,7 @@ public class Face extends SurfaceView {
         //Hair style only has 3 choices
         hairStyle=random.nextInt(3);
     }
-
+    //Coded to fit Nexus 10 and equivalent device orientation
     protected void onDraw(Canvas canvas) {
         /**
          External Citation

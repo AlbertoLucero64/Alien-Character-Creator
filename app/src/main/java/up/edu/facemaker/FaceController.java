@@ -43,34 +43,37 @@ public class FaceController implements View.OnClickListener, SeekBar.OnSeekBarCh
          Solution: I used the example code and mixed them together.
          */
         int selectedId = ((RadioGroup) seekBar.getRootView().findViewById(R.id.radio_group_options)).getCheckedRadioButtonId();
+        int seekBarId = seekBar.getId();
+
+        //Would prefer to use Switch Case but resource ID's are non-final with Android Gradle
         if(selectedId == R.id.radioButton1) {
-            if(seekBar.getId() == R.id.seekBar) {
+            if(seekBarId == R.id.seekBar) {
                 faceModelReference.hairRed = progress;
             }
-            else if(seekBar.getId() == R.id.seekBar2) {
+            else if(seekBarId == R.id.seekBar2) {
                 faceModelReference.hairGreen = progress;
             }
-            else if(seekBar.getId() == R.id.seekBar3) {
+            else if(seekBarId == R.id.seekBar3) {
                 faceModelReference.hairBlue = progress;
             }
         } else if(selectedId == R.id.radioButton2) {
-            if(seekBar.getId() == R.id.seekBar) {
+            if(seekBarId == R.id.seekBar) {
                 faceModelReference.eyesRed = progress;
             }
-            else if(seekBar.getId() == R.id.seekBar2) {
+            else if(seekBarId == R.id.seekBar2) {
                 faceModelReference.eyesGreen = progress;
             }
-            else if(seekBar.getId() == R.id.seekBar3) {
+            else if(seekBarId == R.id.seekBar3) {
                 faceModelReference.eyesBlue = progress;
             }
         } else {
-            if(seekBar.getId() == R.id.seekBar) {
+            if(seekBarId == R.id.seekBar) {
                 faceModelReference.skinRed = progress;
             }
-            else if(seekBar.getId() == R.id.seekBar2) {
+            else if(seekBarId == R.id.seekBar2) {
                 faceModelReference.skinGreen = progress;
             }
-            else if(seekBar.getId() == R.id.seekBar3) {
+            else if(seekBarId == R.id.seekBar3) {
                 faceModelReference.skinBlue = progress;
             }
         }
@@ -100,7 +103,6 @@ public class FaceController implements View.OnClickListener, SeekBar.OnSeekBarCh
 
     @Override
     public void onCheckedChanged(@NonNull RadioGroup group, int checkedId) {
-
         if(checkedId == R.id.radioButton1) {
             seekBarRed.setProgress(faceModelReference.hairRed);
             seekBarGreen.setProgress(faceModelReference.hairGreen);
