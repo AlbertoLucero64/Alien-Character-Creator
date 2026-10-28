@@ -57,7 +57,7 @@ public class Face extends SurfaceView {
         /**
          External Citation
          Date: 2/17/26
-         Problem: Could not update RGB values when drawing
+         Problem: Could not update RGB values when drawing.
          Resource: Google AI showed me the (Color.rgb) method.
          Solution: Implemented method down below, and changed FaceMode.hairRed to faceModelReference.hairRed.
          */
