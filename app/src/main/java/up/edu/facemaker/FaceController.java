@@ -28,7 +28,7 @@ public class FaceController implements View.OnClickListener, SeekBar.OnSeekBarCh
     }
 
     @Override
-    public void onClick(View radioButton) {
+    public void onClick(View randomFaceButton) {
         faceViewReference.randomize();
         faceViewReference.invalidate();
     }

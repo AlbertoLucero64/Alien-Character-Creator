@@ -28,7 +28,8 @@
                     android:id="@+id/textView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Color:"
+                    android:text="Face Color:"
+                    android:textColor="#FFFFFF"
                     android:textSize="36sp" />
 
                 <LinearLayout
@@ -44,7 +45,8 @@
                         android:layout_marginLeft="4dp"
                         android:layout_marginTop="10dp"
                         android:layout_weight="5"
-                        android:text="Red" />
+                        android:text="Red"
+                        android:textColor="#FFFFFF" />
 
                     <Space
                         android:layout_width="wrap_content"
@@ -72,7 +74,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="5"
-                        android:text="Green" />
+                        android:text="Green"
+                        android:textColor="#FFFFFF" />
 
                     <Space
                         android:layout_width="wrap_content"
@@ -98,7 +101,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="5"
-                        android:text="Blue" />
+                        android:text="Blue"
+                        android:textColor="#FFFFFF" />
 
                     <Space
                         android:layout_width="wrap_content"
@@ -116,7 +120,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginLeft="0dp"
                     android:layout_weight=".5"
                     android:orientation="vertical">
 
@@ -125,19 +129,21 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Hair Style:"
+                        android:textColor="#FFFFFF"
                         android:textSize="36sp" />
 
                     <Spinner
                         android:id="@+id/spinner"
                         android:layout_width="match_parent"
                         android:layout_height="48dp"
+                        android:textColor="#FFFFFF"
                         android:entries="@array/hair_style" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginLeft="0dp"
                     android:layout_marginTop="-45dp"
                     android:layout_weight=".51"
                     android:orientation="vertical">
@@ -147,6 +153,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Current Select:"
+                        android:textColor="#FFFFFF"
                         android:textSize="36sp" />
 
                     <RadioGroup
@@ -159,6 +166,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Hair"
+                            android:textColor="#FFFFFF"
                             android:textSize="18sp" />
 
                         <RadioButton
@@ -167,6 +175,7 @@
                             android:layout_height="wrap_content"
                             android:checked="true"
                             android:text="Eyes"
+                            android:textColor="#FFFFFF"
                             android:textSize="18sp" />
 
                         <RadioButton
@@ -174,6 +183,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Skin"
+                            android:textColor="#FFFFFF"
                             android:textSize="18sp" />
                     </RadioGroup>
 
@@ -187,12 +197,13 @@
                     android:orientation="vertical">
 
                     <Button
-                        android:id="@+id/button"
+                        android:id="@+id/randomFace"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginTop="30dp"
                         android:text="RandomFace"
+                        android:textColor="#FFFFFF"
                         android:textSize="24sp" />
                 </LinearLayout>
 

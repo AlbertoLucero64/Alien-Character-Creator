@@ -4,9 +4,6 @@ package up.edu.facemaker;
  * @author Alberto Lucero
  */
 public class FaceModel {
-    public int red;
-    public int green;
-    public int blue;
 
      public int hairRed;
      public int hairGreen;

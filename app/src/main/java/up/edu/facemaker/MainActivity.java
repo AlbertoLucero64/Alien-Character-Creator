@@ -3,8 +3,11 @@ package up.edu.facemaker;
  *
  * @author Alberto Lucero
  */
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.RadioGroup;
 import android.widget.SeekBar;
 import android.widget.Spinner;
@@ -26,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            getWindow().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#000000")));
             return insets;
         });
 
@@ -57,5 +61,9 @@ public class MainActivity extends AppCompatActivity {
         //Click Listener for RadioGroup
         RadioGroup radioGroup = (findViewById(R.id.radio_group_options));
         radioGroup.setOnCheckedChangeListener(faceController);
+
+        //Click Listener for RandomFace Button
+        Button randomizeFaceButton = findViewById(R.id.randomFace);
+        randomizeFaceButton.setOnClickListener(faceController);
     }
 }

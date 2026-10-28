@@ -15,15 +15,9 @@ import java.util.Random;
 
 public class Face extends SurfaceView {
     private FaceModel faceModelReference;
-    public int skinColor;
-    public int eyeColor;
-    public int hairColor;
     public int hairStyle;
     private Random random = new Random();
     //Variable that will be used to randomly select a number from 0 to 255 for RGB values
-    //public int random = (int)(Math.random()*256);
-
-
 
     //Getter method for FaceModel
     public FaceModel getFaceModelReference() {
@@ -36,7 +30,7 @@ public class Face extends SurfaceView {
         faceModelReference = faceModel;
 
         setWillNotDraw(false);
-        setBackgroundColor(Color.WHITE);
+        setBackgroundColor(Color.BLACK);
         //Randomize default face
         randomize();
         }
@@ -75,6 +69,7 @@ public class Face extends SurfaceView {
         eyePaint.setColor(Color.rgb(faceModelReference.eyesRed, faceModelReference.eyesGreen, faceModelReference.eyesBlue));
         skinPaint.setColor(Color.rgb(faceModelReference.skinRed, faceModelReference.skinGreen, faceModelReference.skinBlue));
 
+        //TODO Make view dynamic instead of hardcoding to Nexus 10 orientation
         //Draws Alien Head
         canvas.drawCircle(canvas.getWidth()/2,(canvas.getHeight()/2),400, skinPaint);
         canvas.drawOval((canvas.getWidth()/2)-325,((canvas.getHeight()/2))-400,(canvas.getWidth()/2)+325,(canvas.getHeight()/2)+550,skinPaint);
