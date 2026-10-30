@@ -33,14 +33,6 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        /**
-         External Citation
-         Date: 2/5/26
-         Problem: Could not get extra choices for spinner.
-         Resource: In class instruction/Professor Nuxoll
-         Solution: I used the example code from class.
-         */
-
         SeekBar redSeekBar = findViewById(R.id.seekBar);
         SeekBar greenSeekbar = findViewById(R.id.seekBar2);
         SeekBar blueSeekbar = findViewById(R.id.seekBar3);

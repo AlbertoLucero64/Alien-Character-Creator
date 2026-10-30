@@ -54,13 +54,6 @@ public class Face extends SurfaceView {
     }
     //Coded to fit Nexus 10 and equivalent device orientation
     protected void onDraw(Canvas canvas) {
-        /**
-         External Citation
-         Date: 2/17/26
-         Problem: Could not update RGB values when drawing.
-         Resource: Google AI showed me the (Color.rgb) method.
-         Solution: Implemented method down below, and changed FaceMode.hairRed to faceModelReference.hairRed.
-         */
        //Allows RGB values taken from model to be updated on view
         Paint hairPaint = new Paint();
         Paint eyePaint = new Paint();
@@ -69,7 +62,7 @@ public class Face extends SurfaceView {
         eyePaint.setColor(Color.rgb(faceModelReference.eyesRed, faceModelReference.eyesGreen, faceModelReference.eyesBlue));
         skinPaint.setColor(Color.rgb(faceModelReference.skinRed, faceModelReference.skinGreen, faceModelReference.skinBlue));
 
-        //TODO Make view dynamic instead of hardcoding to Nexus 10 orientation
+        //TODO Make view dynamic instead of hardcoding to Nexus 10 sideways and Foldable Phone orientations
         //Draws Alien Head
         canvas.drawCircle(canvas.getWidth()/2,(canvas.getHeight()/2),400, skinPaint);
         canvas.drawOval((canvas.getWidth()/2)-325,((canvas.getHeight()/2))-400,(canvas.getWidth()/2)+325,(canvas.getHeight()/2)+550,skinPaint);

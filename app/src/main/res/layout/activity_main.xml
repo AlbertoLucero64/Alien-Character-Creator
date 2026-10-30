@@ -3,7 +3,10 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    tools:ignore="ExtraText">
+<!--    //TODO Make fonts-->
+<!--    //TODO make hair-style spinner select white font (make custom spinner and implement) -->
 
 <LinearLayout
 
